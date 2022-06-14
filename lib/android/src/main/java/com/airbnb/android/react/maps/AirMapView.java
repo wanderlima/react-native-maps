@@ -1036,6 +1036,8 @@ public class AirMapView extends MapView implements GoogleMap.InfoWindowAdapter,
 
     AirMapMarker markerView = getMarkerMap(marker);
     event = makeClickEventData(marker.getPosition());
+    event.putString("action", "marker-drag-start");
+    event.putString("id", markerView.getIdentifier());
     manager.pushEvent(context, markerView, "onDragStart", event);
   }
 
@@ -1046,6 +1048,8 @@ public class AirMapView extends MapView implements GoogleMap.InfoWindowAdapter,
 
     AirMapMarker markerView = getMarkerMap(marker);
     event = makeClickEventData(marker.getPosition());
+    event.putString("action", "marker-drag");
+    event.putString("id", markerView.getIdentifier());
     manager.pushEvent(context, markerView, "onDrag", event);
   }
 
@@ -1056,6 +1060,8 @@ public class AirMapView extends MapView implements GoogleMap.InfoWindowAdapter,
 
     AirMapMarker markerView = getMarkerMap(marker);
     event = makeClickEventData(marker.getPosition());
+    event.putString("action", "marker-drag-end");
+    event.putString("id", markerView.getIdentifier());
     manager.pushEvent(context, markerView, "onDragEnd", event);
   }
 
