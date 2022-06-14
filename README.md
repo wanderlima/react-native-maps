@@ -1,3 +1,7 @@
+# :warning: This repo is a fork 
+Repository created to add features and fixes to the Expo 45 compatible version of React Native Maps (0.30.2).
+
+---
 # react-native-maps [![npm version](https://img.shields.io/npm/v/react-native-maps.svg?style=flat)](https://www.npmjs.com/package/react-native-maps)
 
 React Native Map components for iOS + Android
